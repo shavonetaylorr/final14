@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Survey Trends (2020-2024) - shavone taylor</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Developer Survey Trends (2020-2024)</h1>
+    
+    <canvas id="techChart" width="400" height="200"></canvas>
+    <canvas id="dbChart" width="400" height="200"></canvas>
+    
+    <script>
+        // Web Technologies Trend (Example Data)
+        const techData = {
+            labels: ['2020', '2021', '2022', '2023', '2024'],
+            datasets: [{
+                label: 'React.js Usage (%)',
+                data: [56, 60, 64, 67, 70],
+                borderColor: 'rgba(75, 192, 192, 1)',
+                fill: false
+            }]
+        };
+
+        const techConfig = {
+            type: 'line',
+            data: techData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        new Chart(document.getElementById('techChart'), techConfig);
+
+        // Database Usage Trend (Example Data)
+        const dbData = {
+            labels: ['2020', '2021', '2022', '2023', '2024'],
+            datasets: [{
+                label: 'MongoDB Usage (%)',
+                data: [34, 38, 42, 47, 50],
+                borderColor: 'rgba(255, 99, 132, 1)',
+                fill: false
+            }]
+        };
+
+        const dbConfig = {
+            type: 'line',
+            data: dbData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        new Chart(document.getElementById('dbChart'), dbConfig);
+    </script>
+</body>
+</html>
